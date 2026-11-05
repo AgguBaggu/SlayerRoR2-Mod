@@ -1,0 +1,10 @@
+{
+  "name": "Slayer_from_Guilty_Gear",
+  "author": "AgguBaggu",
+  "version_number": "1.0.15",
+  "website_url": "https://github.com/AgguBaggu/SlayerRoR2-Mod",
+  "description": "Slayer from the Guilty Gear franchise as a playable survivor. Mainly based on the Strive version, but with a few Xrd moves.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2121"
+  ]
+}

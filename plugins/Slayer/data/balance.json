@@ -1,0 +1,340 @@
+{
+  "_how_to_read": {
+    "edit": "Change any name, description or number and send the file back. Leave the 'id' fields alone: they tie each entry to the code.",
+    "damage_percent": "Percent of Slayer's damage stat (9 at level 1, +3 per level). 100 = one times the damage stat.",
+    "descriptions": "Exact in-game text. <style=...> tags colour the words: cIsDamage orange, cIsUtility blue, cIsHealing green, cIsHealth red.",
+    "speeds": "Launch, slam and drag speeds are metres per second. 'large' means bosses and anything bigger than human-sized.",
+    "lunge_speed": "Lunge speeds are multiples of his move speed.",
+    "stun": "stun_seconds is how long a hit stuns; bosses and other stun-immune enemies ignore it.",
+    "lysate_cell": "special.lysate_cell_affects says which Lysate Cell's extra charge and 33% shorter cooldown go to: \"bite\", \"super\" or \"both\". Other cooldown reduction always reaches both.",
+    "supers": "super_options are chosen in the loadout. One replaces the Special while UNIVERSE! is active and has its own cooldown, which recharges in the background whatever the Special is showing. While UNIVERSE! is active the Special shows the Super, and while its cooldown runs the Special waits on it: no biting until the Super is used. Using a Super spends UNIVERSE! and starts its cooldown, and it hits with UNIVERSE!'s bonus (x1.3, and a guaranteed crit for x2, plus crit damage from crit chance)."
+  },
+
+  "character": {
+    "id": "SLAYER_BODY",
+    "name": "Slayer",
+    "subtitle": "The Dandy Vampire",
+    "description": "Slayer is a close combat, boxer character with slippery movement and explosive damage. His range is limited to his fists and legs, but he has unpararelled damage potential.<color=#CCD3E0>\n\n< ! > Dandy Step turns all abilities into different follow ups for a short while.\n\n< ! > Dandy Step's follow-up, It's Late is a reliable way of dealing with airborne enemies.\n\n< ! > Slayer can easily reposition in fights with his abilites. Use that to your advantage!\n\n< ! > Landing Bloodsucking Universe greatly empowers your next attack and allows you to use your chosen Super.</color>\n",
+    "lore": "A vampire of considerable age and impeccable taste, once the head of an assassins' guild. He retired for love and has little left to prove. In it for the love of the game.",
+    "outro_win": "Dandy~...",
+    "outro_loss": "...we have purposely trained him wrong, as a joke",
+    "stats": {
+      "max_health": 160,
+      "max_health_per_level": 48,
+      "regen": 3,
+      "regen_per_level": 0.6,
+      "damage": 10,
+      "damage_per_level": 3,
+      "armor": 15,
+      "move_speed": 7
+    },
+    "stats_inherited_from_mercenary": {
+      "crit_percent": 1,
+      "attack_speed": 1,
+      "armor_per_level": 1,
+      "move_speed_per_level": 0,
+      "sprint_multiplier": 1.7,
+      "jump_power": 15,
+      "jumps": 2,
+      "acceleration": 80,
+      "shield": 0
+    },
+    "stats_inherited_note": "Measured in game. He's built on Mercenary's body and doesn't set these himself; change any of them and it becomes his own.",
+    "immune_to_fall_damage": true,
+    "immune_to_executes": true,
+    "sound_volume_percent": 60
+  },
+
+  "passive": {
+    "id": "SLAYER_PASSIVE",
+    "name": "Refined Palate",
+    "description": "<style=cIsHealing>Heal</style> for <style=cIsHealing>1%</style> of all damage you deal. Slayer can <style=cIsUtility>jump twice</style> and <style=cIsUtility>doesn't take fall damage</style>",
+    "lifesteal_percent": 1
+  },
+
+  "universe_buff": {
+    "id": "UNIVERSE",
+    "name": "UNIVERSE!",
+    "description": "Your next attack is a <style=cIsDamage>guaranteed Critical Strike with +20% damage</style> that stuns. Each 1% of Critical Strike chance adds 1% Critical Strike damage to it instead.",
+    "granted_by": "Landing the grab of Bloodsucking Universe",
+    "spent_by": "One of his own attacks connecting, using Super Mappa Hunch even on a whiff, or the stage ending",
+    "damage_bonus_percent": 20,
+    "always_critical": true,
+    "crit_chance_to_crit_damage_percent": 100,
+    "stun_seconds": 1,
+    "unlocks": "The Super chosen in the loadout, on the Special slot",
+    "hit_effect": {
+      "darken_seconds": 2.2,
+      "darken_strength_percent": 80,
+      "mote_seconds": 2.6,
+      "mote_count": 800,
+      "mote_size_multiplier": 1.2,
+      "mote_spread_metres": 20,
+      "spark_size": 1.6
+    },
+    "hit_effect_pilebunker": {
+      "darken_seconds": 2.6,
+      "darken_strength_percent": 90,
+      "mote_seconds": 3,
+      "mote_count": 1200,
+      "mote_size_multiplier": 1.2,
+      "mote_spread_metres": 20,
+      "spark_size": 1.8
+    },
+    "hit_effect_super": {
+      "darken_seconds": 3,
+      "darken_strength_percent": 85,
+      "mote_seconds": 3.5,
+      "mote_count": 1500,
+      "mote_size_multiplier": 1.2,
+      "mote_spread_metres": 20,
+      "spark_size": 1.9
+    }
+  },
+
+  "risc": {
+    "id": "RISC",
+    "name": "RISC",
+    "description": "Each stack makes your next ability other than the primary and Bloodsucking Universe deal <style=cIsDamage>10% more damage</style> to that enemy, up to 10 stacks. 3 stacks are lost on hit.",
+    "granted_by": "Each hit of the primary combo, one stack per hit on each enemy; Dandy Sweep and Crosswise Heel add 2 per hit and get the bonus without using any up",
+    "damage_bonus_percent_per_stack": 10,
+    "max_stacks": 10,
+    "stacks_used_up_per_hit": 3
+  },
+
+  "primary": {
+    "id": "SLAYER_GENTLEMAN",
+    "name": "The ol' reliable",
+    "description": "Strike for <style=cIsDamage>150% damage</style>, swipe low for <style=cIsDamage>200%</style>, then stomp for <style=cIsDamage>300%</style>, <style=cIsUtility>launching</style> enemies into the air. Every hit applies <style=cIsDamage>RISC</style>.",
+    "cooldown_seconds": 0,
+    "scales_with_attack_speed": true,
+    "seconds_to_continue_combo": 0.4,
+    "steps": [
+      { "name": "c.S", "damage_percent": 150, "stun_seconds": 0 },
+      { "name": "2S", "damage_percent": 200, "stun_seconds": 0, "pull_per_metre_of_distance": 2.5, "max_pull_speed": 12, "large_pull_multiplier": 0.7 },
+      { "name": "2H", "damage_percent": 300, "stun_seconds": 0, "launch_speed": 12, "large_launch_speed": 10 }
+    ]
+  },
+
+  "secondary_options": [
+    {
+      "id": "SLAYER_MAPPA",
+      "name": "Mappa Hunch",
+      "description": "<style=cIsUtility>Lunge forward</style>, dealing <style=cIsDamage>500% damage</style> to the first enemy you hit. Holds 2 charges.",
+      "cooldown_seconds": 5,
+      "charges": 2,
+      "damage_percent": 500,
+      "stun_seconds": 0,
+      "lunge_speed": 7.5,
+      "speed_kept_in_air_afterwards": 0.5,
+      "speed_kept_on_ground_afterwards": 0.3
+    },
+    {
+      "id": "SLAYER_WINGS",
+      "name": "Eternal Wings",
+      "description": "<style=cIsDamage>Stunning</style>. Rise off the ground, dealing <style=cIsDamage>250% damage</style> and launching nearby enemies. When in the air, perform <style=cIsUtility>Straight-Down Dandy</style> instead. Start gliding, pulling along all nearby enemies and dealing <style=cIsDamage>200% damage</style>. On landing deal <style=cIsDamage>300% damage</style>. <style=cIsDamage>Damage</style> and <style=cIsUtility>radius</style> are based on velocity. Holds 2 charges.",
+      "cooldown_seconds": 7,
+      "charges": 2,
+      "on_ground": {
+        "name": "Eternal Wings",
+        "damage_percent": 300,
+        "stun_seconds": 1,
+        "rise_speed": 40,
+        "launch_speed": 38,
+        "large_launch_speed": 20,
+        "hit_seconds_while_rising": 0.4
+      },
+      "in_air": {
+        "name": "Straight-Down Dandy",
+        "damage_percent_on_the_way_down": 200,
+        "damage_percent_on_landing": 250,
+        "stun_seconds": 1,
+        "dive_speed": 45,
+        "speed_soft_cap": 110,
+        "speed_gain_kept_past_soft_cap": 0.25,
+        "speed_gained_per_second_diving_straight_down": 40,
+        "speed_lost_per_second_percent": 70,
+        "turn_degrees_per_second": 140,
+        "steepest_climb_degrees": 10,
+        "stall_speed": 30,
+        "max_flight_seconds": 20,
+        "carry_strength_small": 1,
+        "carry_strength_large": 0.5,
+        "carry_strength_boss": 0.15,
+        "drag_enemies_down_speed": 55,
+        "large_drag_enemies_down_speed": 38,
+        "hitbox_metres_while_flying": 7,
+        "landing_radius_metres": 5,
+        "landing_radius_metres_per_speed": 0.20,
+        "landing_damage_bonus_percent_per_speed": 1.2,
+        "flight_damage_bonus_percent_per_speed": 1.3,
+        "landing_damage_penalty_percent_per_speed_below_dive_speed": 1.6,
+        "landing_damage_penalty_max_percent": 70,
+        "glide_effect": "boost"
+      }
+    }
+  ],
+
+  "utility": {
+    "id": "SLAYER_DANDY",
+    "name": "Dandy Step",
+    "description": "<style=cIsUtility>Dash forward</style> while <style=cIsUtility>invulnerable</style>. For a moment after, your skills become different <style=cIsDamage>follow-ups</style>: Pilebunker, It's Late, Dandy Sweep and Master's Hammer.",
+    "cooldown_seconds": 7,
+    "charges": 1,
+    "damage_percent": 0,
+    "lunge_speed": 3.2,
+    "follow_up_window_seconds": 0.8,
+    "follow_ups": [
+      {
+        "id": "SLAYER_PILEBUNKER",
+        "input": "Primary",
+        "name": "Pilebunker",
+        "description": "<style=cIsDamage>Stunning</style>. The reason you play Slayer. A crushing, hard hitting attack for <style=cIsDamage>700% damage</style>, further multiplied by an additional <style=cIsDamage>50%</style> under <style=cIsDamage>UNIVERSE!</style>. During <style=cIsDamage>UNIVERSE!</style>, anything it launches into a wall takes an additional <style=cIsDamage>800% damage</style> and <style=cIsUtility>wall splats</style>.",
+        "damage_percent": 700,
+        "damage_multiplier_under_universe": 1.5,
+        "stun_seconds": 1,
+        "stun_seconds_added_under_universe": 1,
+        "launch_speed_under_universe": 50,
+        "large_launch_speed_under_universe": 40,
+        "boss_launch_speed_under_universe": 20,
+        "boss_damage_bonus_percent": 30,
+        "wall_impact_damage_percent_under_universe": 800,
+        "wall_impact_stun_seconds_under_universe": 1,
+        "wall_stick_seconds_under_universe": 1.5,
+        "lunge_speed": 5.6,
+        "lunge_seconds_added_per_enemy_hit": 0.04,
+        "max_lunge_seconds_added": 0.25
+      },
+      {
+        "id": "SLAYER_ITSLATE",
+        "input": "Secondary",
+        "name": "It's Late",
+        "description": "<style=cIsDamage>Stunning</style>. A massive anti-air strike for <style=cIsDamage>400% damage</style> that drives airborne enemies <style=cIsUtility>into the ground</style> for <style=cIsDamage>extra damage.</style>",
+        "damage_percent": 400,
+        "stun_seconds": 0,
+        "stun_seconds_airborne": 1,
+        "slam_speed": 50,
+        "large_slam_speed": 40,
+        "boss_slam_speed": 28,
+        "slam_note": "Flying enemies take the game's own impact damage from the slam: 7% of max health per (impact speed / their move speed), once impact speed reaches 4x their move speed. These speeds set it."
+      },
+      {
+        "id": "SLAYER_SWEEP",
+        "input": "Utility",
+        "name": "Dandy Sweep",
+        "description": "<style=cIsDamage>Stunning</style>. <style=cIsUtility>Slide a long way</style> along the ground for <style=cIsDamage>200% damage</style>, sweeping enemies along and sliding further for each one. If it hit anything, it ends in <style=cIsDamage>Crosswise Heel</style>, a rising kick dealing <style=cIsDamage>300% damage</style> that launches both you and your enemies. Both add <style=cIsDamage>2 RISC</style> per hit and gain its bonus without using it up.",
+        "damage_percent": 200,
+        "stun_seconds": 0,
+        "lunge_speed": 7.5,
+        "lunge_seconds_added_per_enemy_hit": 0.04,
+        "max_lunge_seconds_added": 0.25,
+        "carry_strength_small": 1,
+        "carry_strength_large": 1,
+        "carry_strength_boss": 0.15,
+        "risc_stacks_per_hit": 2,
+        "on_hit": {
+          "name": "Crosswise Heel",
+          "damage_percent": 300,
+          "stun_seconds": 1,
+          "launch_speed": 26,
+          "large_launch_speed": 22,
+          "risc_stacks_per_hit": 2
+        }
+      },
+      {
+        "id": "SLAYER_HAMMER",
+        "input": "Special",
+        "name": "Master's Hammer",
+        "description": "<style=cIsDamage>Stunning</style>. Leap, then land with a <style=cIsDamage>large area</style> strike for <style=cIsDamage>400% damage</style> that <style=cIsUtility>pulls enemies in</style>, with <style=cIsDamage>more damage</style> and <style=cIsUtility>radius</style> per metre fallen.",
+        "damage_percent": 400,
+        "stun_seconds": 0.5,
+        "jump_speed": 23,
+        "radius_metres": 12.12,
+        "radius_per_metre_fallen": 1,
+        "damage_bonus_percent_per_metre": 4.44,
+        "damage_soft_cap_metres": 20,
+        "rate_past_soft_cap": 0.25,
+        "pull_per_metre_of_distance": 1.5,
+        "max_pull_speed": 60,
+        "large_pull_multiplier": 0.7
+      }
+    ]
+  },
+
+  "special": {
+    "id": "SLAYER_UNIVERSE",
+    "name": "Bloodsucking Universe",
+    "description": "<style=cIsDamage>Stunning</style>. Lunge and grab an enemy, then bite for <style=cIsDamage>400% damage</style>, <style=cIsHealing>healing 20% max health</style>. <style=cIsDamage>UNIVERSE!</style>: your next attack is a <style=cIsDamage>Critical Strike</style> which deals <style=cIsDamage>20% more damage</style> and <style=cIsDamage>stuns</style>. While <style=cIsDamage>UNIVERSE!</style> is active, your chosen <style=cIsDamage>Super</style> is available.",
+    "cooldown_seconds": 12,
+    "charges": 1,
+    "lysate_cell_affects": "bite",
+    "grab_damage_percent": 100,
+    "grab_can_kill": false,
+    "grab_stun_seconds": 1,
+    "grab_lunge_speed": 3.2,
+    "bite_damage_percent": 300,
+    "bite_stun_seconds": 1,
+    "bite_heal_percent_of_max_health": 20
+  },
+
+  "super_options": [
+    {
+      "id": "SLAYER_SUPER",
+      "name": "Super Mappa Hunch",
+      "description": "Hold to charge. Release for a flying straight dealing <style=cIsDamage>800%-2400% damage</style>. Charging drains<style=cIsHealth> up to 30% of your max health</style>. Can't move while charging.",
+      "cooldown_seconds": 40,
+      "charges": 1,
+      "charge_seconds": 2.5,
+      "health_drain_percent_of_max_over_full_charge": 30,
+      "damage_percent_no_charge": 800,
+      "damage_percent_almost_full_charge": 1200,
+      "damage_percent_full_charge": 2400,
+            "distance_metres_no_charge": 35,
+      "distance_metres_almost_full_charge": 90,
+      "distance_metres_full_charge": 180,
+      "flight_lunge_speed": 16,
+      "remaining_distance_kept_after_first_hit": 0.3
+    },
+    {
+      "id": "SLAYER_ALLDEAD",
+      "name": "All Dead",
+      "description": "<style=cIsDamage>Stunning</style>. <style=cIsUtility>Invulnerable</style>. Hold to target an enemy within 50m. Release to <style=cIsUtility>teleport behind it</style> and strike for <style=cIsDamage>2400% damage</style>, launching them towards the stars. Dandy.",
+      "cooldown_seconds": 40,
+      "charges": 1,
+      "damage_percent": 2400,
+      "stun_seconds": 1,
+      "target_range_metres": 50,
+      "target_cone_degrees": 20,
+      "launch_speed": 60,
+      "large_launch_speed": 30,
+      "boss_kill_effect_seconds": 9,
+      "elite_kill_effect_seconds": 5,
+      "elite_kill_effect_strength_percent": 60
+    },
+    {
+      "id": "SLAYER_LASTHORIZON",
+      "name": "Last Horizon",
+      "description": "<style=cIsDamage>Stunning</style>. <style=cIsUtility>Invulnerable</style>. Punch for <style=cIsDamage>1000% damage</style>, before sending nearby enemies for a ride, dealing a total of <style=cIsDamage>3000% damage</style>. Bounce damage isn't affected by <style=cIsDamage>UNIVERSE!</style> and can't critically strike.",
+      "cooldown_seconds": 40,
+      "charges": 1,
+      "punch_damage_percent": 200,
+      "explosion_damage_percent": 800,
+      "stun_seconds": 1,
+      "explosion_radius_metres": 12,
+      "launch_speed": 130,
+      "large_launch_speed": 150,
+      "bounce_damage_percent": 300,
+      "max_damaging_bounces": 10,
+      "speed_kept_per_bounce": 1,
+      "speed_kept_per_bounce_after_max": 0.2,
+      "launch_angle_degrees": 15,
+      "floor_bounce_up_speed": 5,
+      "wall_radius_metres": 40,
+      "wall_height_metres": 40,
+      "floor_depth_metres": 6,
+      "boss_wall_radius_metres": 32,
+      "boss_wall_height_metres": 32,
+      "bounce_seconds": 5
+    }
+  ]
+}

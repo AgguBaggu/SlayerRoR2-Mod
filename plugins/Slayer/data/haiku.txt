@@ -1,0 +1,33 @@
+0	人生は	正気の沙汰かよ	ともえ投げ	We know that life is	Devoid of reason and thought	Into an overhead throw
+1	服脱いで	クローン技術で	全米ナンバー１	I remove my clothes	With cloning technology	America's best
+2	朝起きて	右も左も	汗まみれ	I rise with the sun	Both defter and sinister	Drenched in heavy sweat
+3	エイリアン	散々迷って	インファイト	The truth is out there	Now irretrievably lost	Fight among themselves
+4	世紀末	後生大事に	連コイン	My centennial	With my utmost devotion	Rapid ancient coins
+5	今年こそ	汚職議員と	一人旅	In this august year	With my corrupt congressman	I journey alone
+6	アラフォーが	金の力で	ほっかほか	When one nears 40...	The great power of money	Keeps me warm all night
+7	徹夜明け	プラス思考の	散財だ	At the break of dawn	An optimistic outlook	A waste of money
+8	親ゴリラ	リーチ一発	死語連発	Mother gorilla	I have checkmate in two moves	Speak a dead language
+9	相次いで	心ゆくまで	夢見がち	Now in succession	We do as the heart desires	I follow my dream
+10	犯人は	涙こらへて	島流し	This is the culprit	Holding back their angry tears	To live in exile
+11	これでもか	一足違いで	全裸でゴー	Even now, with this	Close enough to feel it pass	Let's go commando
+12	伯爵が	良かれと思って	劇画タッチ	This autumnal count	Believed that all would be right	Dramatic comic
+13	アマゾネス	サタデーナイトに	プチ旅行	Amazonian	On a Saturday evening	A short vacation
+14	暗闇で	トイレに駆け込み	命乞い	In deepest darkness	Quickly now, to the restroom	Begging for more life
+15	社長でも	身の毛もよだつ	団地妻	Even the leader	A vile, bloodcurdling nightmare	With multiple wives
+16	かつてない	どの道結局	下剋上	Unprecedented	It the end, it matters not	The revolution
+17	旅先で	今か今かと	一人酒	On a vacation	Someday the moment will come	Now, he drinks alone
+18	そこそこの	メカの身体で	褒め殺し	So mediocre...	In a mechanized body	Such backhanded praise
+19	はりきって	流れ無視して	寝正月	Enthusiasm	You've no respect for the flow	At home on New Years
+20	消灯後	独り寂しく	テクニシャン	When the lights go out	Alone, without companions	Find a technician
+21	泣き叫び	子供に交じって	鍋奉行	Crying and shouting	In the guise of a young child	Sing "hail to the chef
+22	星空に	一子相伝	返り討ち	Under the heavens	Inheritance of technique	Hunter is hunted
+23	必殺の	土下座で頼むよ	チラリズム	A vicious attack	I prostrate myself and beg	An erotic peek
+24	暇なのに	脱毛しすぎて	チャンピオン	Though I may be bored	Aggressive hair removal	The king's champion
+25	胸のうち	メールでごめんね	ロボ将軍	Deep within your heart	Sorry, it's via email	Robotic Shogun
+26	ショッキング！	切腹覚悟の	宇宙人	What is now shocking	Prepared to open my stomach	With my alien
+27	悩殺か？	恥じらいながら	放置プレイ	So fascinating	A mind consumed with chagrin	The silent treatment
+28	邪魔するな	他人のお金で	合体だ	Stay out of the way...	With someone else's money	More than meets the eye!
+29	振り向けば	一か八かの	不幸自慢	Every now and then	There can be no higher stakes	Bragging of bad luck.
+30	鉄壁の	チャック全開	自爆した	Nigh impregnable	The fly's completely open	He self destructed
+31	ちょっと待て	親友なのに	原始人	You, cease and desist	Though you were my best friend...	Beyond primeval
+32	やるがいい	光の速さで	自己破産	Give it your best shot	Flying at the speed of light	Happily bankrupt
