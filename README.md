@@ -4,7 +4,7 @@ The dandy vampire joins Risk of Rain 2. He's built mainly on his Guilty Gear -St
 
 ![Slayer on the character select screen](https://raw.githubusercontent.com/AgguBaggu/SlayerRoR2-Mod/main/media/character_select.png)
 
-Slayer is a close combat, boxer character with slippery movement and explosive damage. His range is limited to his fists and legs, but he has unpararelled damage potential.
+Slayer is a close combat, boxer character with slippery movement and explosive damage. His range is limited to his fists and legs, but he has unparalleled damage potential.
 
 ![Slayer's signature pilebunker](https://raw.githubusercontent.com/AgguBaggu/SlayerRoR2-Mod/main/media/universe_pilebunker.gif)
 
@@ -18,7 +18,7 @@ Slayer is a close combat, boxer character with slippery movement and explosive d
 
 - **Utility: Dandy Step** - A quick step that, for a moment, turns his other abilities into the follow-ups: Pilebunker, It's Late, Sweep (+ Crosswise Heel) and Master's Hammer.
 - **Special: Bloodsucking Universe** - Grab an enemy and bite it. Landing the grab grants **UNIVERSE!**: his next attack is a guaranteed critical strike with extra damage, and his chosen Super takes this Special's place.
-- **Supers: Super Mappa Hunch, All Dead or Last Horizon** - For when you need the **BIG* damage. Dandy~
+- **Supers: Super Mappa Hunch, All Dead or Last Horizon** - For when you need the **BIG** damage. Dandy~
 
 ![Send them to the stars](https://raw.githubusercontent.com/AgguBaggu/SlayerRoR2-Mod/main/media/all-dead-haiku.gif)
 
